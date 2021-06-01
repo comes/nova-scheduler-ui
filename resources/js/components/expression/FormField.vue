@@ -415,7 +415,7 @@
 import {FormField, HandlesValidationErrors} from 'laravel-nova'
 
 const cronParser = require('cron-parser')
-import cronstrue from "cronstrue/i18n"
+import cronstrue from "cronstrue"
 
 export default {
     mixins: [FormField, HandlesValidationErrors],
@@ -445,7 +445,7 @@ export default {
     }),
     computed: {
         human: function() {
-            return cronstrue.toString(this.robot, { locale: "de" })
+            return cronstrue.toString(this.robot)
         },
         robot: {
             get: function() {
