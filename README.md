@@ -9,3 +9,18 @@ You can install the package in to a Laravel app that uses [Nova](https://nova.la
 ```bash
 composer require comes/nova-scheduler-ui
 ```
+
+After installation run
+```
+php artisan migrate
+```
+
+and add Packge to tools section in NovaServiceProvider
+```
+public function tools()
+{
+    return [
+        new NovaSchedulerUi,
+    ];
+}
+```
