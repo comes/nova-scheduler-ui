@@ -1,6 +1,6 @@
 {
     "name": "comes/nova-scheduler-ui",
-    "description": "A Laravel Nova tool.",
+    "description": "This package is a simple nova based UI for DionTech/laravel-extended-scheduler. Manage your scheduler the graphical way.",
     "keywords": [
         "laravel",
         "nova"
