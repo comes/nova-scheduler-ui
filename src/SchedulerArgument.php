@@ -34,9 +34,9 @@ class SchedulerArgument extends Field
             $data = json_decode($request[$requestAttribute],true);
             $isJob = is_string($data[1]);
 
-            $validator = Validator::make($request->all(), [
-                'arguments.0' => 'required|min:1',
-                'arguments.1' => $isJob?'required':'required|array',
+            $validator = Validator::make($data, [
+                0 => 'required|min:1',
+                1 => $isJob?'required':'sometimes|array',
             ])->validate();
 
             $model->method = $isJob?'job':'command';
